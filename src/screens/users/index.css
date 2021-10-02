@@ -1,0 +1,26 @@
+.users_container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.users_count {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: black 2px underline;
+}
+
+.user_container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+   font-size: 16px;
+   padding: 10px;
+   font-weight: bold;
+}
+
+.user_div {
+    padding: 5px;
+}
