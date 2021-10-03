@@ -8,8 +8,8 @@ const Users = ({allUsers,  count}) => {
             <div className="users_count">
                 Count: {count}
             </div>
-            <div >  
-              {allUsers.map(user => (
+            <div>  
+              {allUsers.map((user) => (
                     <div className="user_container">
                         <div className="user_div">
                             Name: {user.name}
@@ -29,9 +29,15 @@ const Users = ({allUsers,  count}) => {
                         <div className="user_div">
                             User name: {user.userName}
                         </div>
+                        <div>
+                            <button className="user_button">Edit</button>
+                            <button className="user_button">Delete</button>
+                        </div>
                     </div>
+                    
                 ))}
             </div>
+           
         </div>
     );
 };

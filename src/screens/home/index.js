@@ -44,6 +44,7 @@ const Home = ({setUser}) => {
       email,
       userName
     })
+    alert("User is added!")
   }
 
   return (
@@ -54,6 +55,9 @@ const Home = ({setUser}) => {
         <input placeholder="Age" onChange={handleAge}/>
         <div className="gender" onChange={handleGender}>
           <select>
+            <option>
+              Gender*
+            </option>
             <option>
               Male
             </option>
@@ -67,22 +71,19 @@ const Home = ({setUser}) => {
       </div>
       <div className="main_buttons_container">
         <button onClick={createUser}>Add user</button>
-        {/* <button onClick={() => reset()}>reset</button> */}
       </div>
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
-    console.log(state.list)
-    return({
-
-    })
+  console.log(state.users.list)
+  return({
+  })
 }
 
 const mapDispatchToProps = (dispatch) => ({
   setUser: (user) => dispatch(setData(user)),
-  // reset: () => dispatch({type: 'RESET'}),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

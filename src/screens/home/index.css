@@ -3,13 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 input {
     width: 30%;
     margin-bottom: 10px;
-    padding: 5px;
+    padding: 10px;
     outline: none;
     border: none;
     border-radius: 5px;
@@ -37,7 +37,7 @@ select {
 
 button {
     cursor: pointer;
-    background-color: #0E66A0;
+    background-color: #0a4974;
     color: white;
     padding: 10px 30px;
     border-radius: 10px;
