@@ -36,7 +36,7 @@ const Home = ({setUser}) => {
     setUserName(event.target.value)
   };
 
-  const createUser = () => {
+  const createUser = (prevState) => {
     setId(id + 1)
     setUser({
       id,
@@ -47,15 +47,16 @@ const Home = ({setUser}) => {
       email,
       userName
     })
-    alert("User is added!")
+    alert("User is added!");
+
   };
 
   return (
     <div className="home_container">
       <div className="main_inputs_container">
-        <input placeholder="Name" onChange={handleName} />
-        <input placeholder="Last name" onChange={handleLastname}/>
-        <input placeholder="Age" onChange={handleAge}/>
+        <input type="text" placeholder="Name" onChange={handleName} />
+        <input type="text" placeholder="Last name" onChange={handleLastname}/>
+        <input type="text" placeholder="Age" onChange={handleAge}/>
         <div className="gender" onChange={handleGender}>
           <select>
             <option>
@@ -69,8 +70,8 @@ const Home = ({setUser}) => {
             </option>
           </select>
         </div>
-        <input placeholder="Email" onChange={handleEmail}/>
-        <input placeholder="User Name" onChange={handleUserName}/>
+        <input type="text" placeholder="Email" onChange={handleEmail}/>
+        <input type="text" placeholder="User Name" onChange={handleUserName}/>
       </div>
       <div className="main_buttons_container">
         <button onClick={createUser}>Add user</button>

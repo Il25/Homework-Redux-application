@@ -11,8 +11,8 @@ const Users = ({allUsers, count, deleteUser}) => {
                 Count: {count}
             </div>
             <div>  
-              {allUsers.map((user) => (
-                    <div className="user_container">
+              {allUsers.map((user, i) => (
+                    <div key={i} className="user_container">
                         <div className="user_div">
                             Name: {user.name}
                         </div>
