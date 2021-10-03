@@ -6,3 +6,17 @@ export const setData = (data) => {
         payload: data,
     });
 };
+
+export const editData = (data) => {
+    return({
+        type: actionsTypes.EDIT_USER,
+        payload: data,
+    });
+};
+
+export const deleteData = (data) => {
+    return({
+        type: actionsTypes.DELETE_USER,
+        payload: data,
+    });
+};

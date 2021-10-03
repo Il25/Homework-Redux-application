@@ -10,6 +10,7 @@ const Home = ({setUser}) => {
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
   const [userName, setUserName] = useState("");
+  const [id, setId] = useState(Number)
 
   const handleName = (event) => {
     setName(event.target.value)
@@ -36,7 +37,9 @@ const Home = ({setUser}) => {
   };
 
   const createUser = () => {
+    setId(id + 1)
     setUser({
+      id,
       name, 
       lastname,
       age,
@@ -45,7 +48,7 @@ const Home = ({setUser}) => {
       userName
     })
     alert("User is added!")
-  }
+  };
 
   return (
     <div className="home_container">
@@ -76,14 +79,8 @@ const Home = ({setUser}) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  console.log(state.users.list)
-  return({
-  })
-}
-
 const mapDispatchToProps = (dispatch) => ({
   setUser: (user) => dispatch(setData(user)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(null, mapDispatchToProps)(Home);
