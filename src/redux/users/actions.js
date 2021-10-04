@@ -7,10 +7,10 @@ export const setData = (data) => {
     });
 };
 
-export const editData = (data) => {
+export const saveChangesData = (user) => {
     return({
-        type: actionsTypes.EDIT_USER,
-        payload: data,
+        type: actionsTypes.SAVE_CHANGES_USER,
+        payload: user,
     });
 };
 

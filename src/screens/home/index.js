@@ -5,15 +5,16 @@ import "./index.css";
 
 const Home = ({setUser}) => {
   const [name, setName] = useState("");
-  const [lastname, setLastname] = useState("");
+  const [lastName, setLastname] = useState("");
   const [gender, setGender] = useState("");
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
   const [userName, setUserName] = useState("");
-  const [id, setId] = useState(Number)
+  const [id, setId] = useState();
 
   const handleName = (event) => {
-    setName(event.target.value)
+    setName(event.target.value);
+    setId(Date.now());
   };
 
   const handleLastname = (event) => {
@@ -36,25 +37,27 @@ const Home = ({setUser}) => {
     setUserName(event.target.value)
   };
 
-  const createUser = (prevState) => {
-    setId(id + 1)
-    setUser({
-      id,
-      name, 
-      lastname,
-      age,
-      gender,
-      email,
-      userName
-    })
-    alert("User is added!");
-
+  const createUser = () => {   
+    if(typeof name === 'undefined' || name === ""){
+      alert("Enter your name")
+    } else { 
+      setUser({
+        id,
+        name, 
+        lastName,
+        age,
+        gender,
+        email,
+        userName
+      })
+      alert("User is added!");
+    };
   };
-
+   
   return (
     <div className="home_container">
       <div className="main_inputs_container">
-        <input type="text" placeholder="Name" onChange={handleName} />
+        <input type="text" placeholder="Name*" onChange={handleName} />
         <input type="text" placeholder="Last name" onChange={handleLastname}/>
         <input type="text" placeholder="Age" onChange={handleAge}/>
         <div className="gender" onChange={handleGender}>

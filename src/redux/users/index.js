@@ -3,7 +3,7 @@ import { actionsTypes } from "./actionsTypes";
 const initialState = {
   list: [],
   count: 0,
-  editUser: [],
+  editUser: {}
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -14,12 +14,20 @@ const usersReducer = (state = initialState, action) => {
         list: [...state.list, action.payload],
         count: state.count + 1,
       };
-    case actionsTypes.EDIT_USER:
+    case actionsTypes.SAVE_CHANGES_USER:
       return {
         ...state,
-        editUser: state.list.find(user => user.id === action.payload),
-        list: [...state.list].filter(user => user.id !== action.payload),
-      };
+        list: state.list.map(i => {
+          if (i?.id === action?.payload?.id) {
+            return {
+              ...i,
+              ...action?.payload,
+            }
+          } else {
+            return i;
+          }
+        }),
+      };  
     case actionsTypes.DELETE_USER:
       return {
         ...state,
@@ -28,7 +36,7 @@ const usersReducer = (state = initialState, action) => {
       };  
     default:
       return state;
-  }
+  };
 };
 
 export default usersReducer;
