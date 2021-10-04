@@ -50,27 +50,27 @@ const Users = ({allUsers, deleteUser, saveChangesUser}) => {
                 </div>
             : 
                 <div className="changes_user_container">
-                    <input defaultValue={changeUserInfo.name} onChange={(e) => {setChangeUserInfo(prevState => ({
+                    <input placeholder="Name" defaultValue={changeUserInfo.name} onChange={(e) => {setChangeUserInfo(prevState => ({
                         ...prevState,
                         name: e.target.value,
                     }))}}></input>
-                    <input defaultValue={changeUserInfo.lastName} onChange={(e) => {setChangeUserInfo(prevState => ({
+                    <input placeholder="Last name" defaultValue={changeUserInfo.lastName} onChange={(e) => {setChangeUserInfo(prevState => ({
                         ...prevState,
                         lastName: e.target.value,
                     }))}}></input>
-                    <input defaultValue={changeUserInfo.age} onChange={(e) => {setChangeUserInfo(prevState => ({
+                    <input placeholder="age" defaultValue={changeUserInfo.age} onChange={(e) => {setChangeUserInfo(prevState => ({
                         ...prevState,
                         age: e.target.value,
                     }))}}></input>
-                    <input defaultValue={changeUserInfo.gender} onChange={(e) => {setChangeUserInfo(prevState => ({
+                    <input placeholder="Gender" defaultValue={changeUserInfo.gender} onChange={(e) => {setChangeUserInfo(prevState => ({
                         ...prevState,
                         gender: e.target.value,
                     }))}}></input>
-                    <input defaultValue={changeUserInfo.email} onChange={(e) => {setChangeUserInfo(prevState => ({
+                    <input placeholder="Email" defaultValue={changeUserInfo.email} onChange={(e) => {setChangeUserInfo(prevState => ({
                         ...prevState,
                         email: e.target.value,
                     }))}}></input>
-                    <input defaultValue={changeUserInfo.userName} onChange={(e) => {setChangeUserInfo(prevState => ({
+                    <input placeholder="User name" defaultValue={changeUserInfo.userName} onChange={(e) => {setChangeUserInfo(prevState => ({
                         ...prevState,
                         userName: e.target.value,
                     }))}}></input>
