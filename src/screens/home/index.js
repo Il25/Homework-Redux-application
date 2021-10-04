@@ -39,7 +39,7 @@ const Home = ({setUser}) => {
 
   const createUser = () => {   
     if(typeof name === 'undefined' || name === ""){
-      alert("Enter your name")
+      alert("Enter your name");
     } else { 
       setUser({
         id,

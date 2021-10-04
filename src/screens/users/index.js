@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { deleteData, saveChangesData } from "../../redux/users/actions";
 import "./index.css";
 
-
 const Users = ({allUsers, deleteUser, saveChangesUser}) => {    
     const [isEditMode, setEditMode] = useState(true);
     const [changeUserInfo, setChangeUserInfo] = useState({});
