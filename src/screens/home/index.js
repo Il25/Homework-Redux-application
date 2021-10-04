@@ -18,23 +18,23 @@ const Home = ({setUser}) => {
   };
 
   const handleLastname = (event) => {
-    setLastname(event.target.value)
+    setLastname(event.target.value);
   };
 
   const handleAge = (event) => {
-    setAge(event.target.value)
+    setAge(event.target.value);
   };
 
   const handleGender = (event) => {
-    setGender(event.target.value)
+    setGender(event.target.value);
   };
 
   const handleEmail = (event) => {
-    setEmail(event.target.value)
+    setEmail(event.target.value);
   };
 
   const handleUserName = (event) => {
-    setUserName(event.target.value)
+    setUserName(event.target.value);
   };
 
   const createUser = () => {   
@@ -49,17 +49,22 @@ const Home = ({setUser}) => {
         gender,
         email,
         userName
-      })
+      });
       alert("User is added!");
     };
+    setName("");
+    setLastname("");
+    setAge("");
+    setEmail("");
+    setUserName("");
   };
    
   return (
     <div className="home_container">
       <div className="main_inputs_container">
-        <input type="text" placeholder="Name*" onChange={handleName} />
-        <input type="text" placeholder="Last name" onChange={handleLastname}/>
-        <input type="text" placeholder="Age" onChange={handleAge}/>
+        <input value={name} type="text" placeholder="Name*" onChange={handleName} />
+        <input value={lastName} type="text" placeholder="Last name" onChange={handleLastname}/>
+        <input value={age} type="text" placeholder="Age" onChange={handleAge}/>
         <div className="gender" onChange={handleGender}>
           <select>
             <option>
@@ -73,8 +78,8 @@ const Home = ({setUser}) => {
             </option>
           </select>
         </div>
-        <input type="text" placeholder="Email" onChange={handleEmail}/>
-        <input type="text" placeholder="User Name" onChange={handleUserName}/>
+        <input value={email} type="text" placeholder="Email" onChange={handleEmail}/>
+        <input value={userName} type="text" placeholder="User Name" onChange={handleUserName}/>
       </div>
       <div className="main_buttons_container">
         <button onClick={createUser}>Add user</button>
