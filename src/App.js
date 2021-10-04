@@ -15,7 +15,7 @@ const App = () => {
         <Route exact path="/users" component={Users} />
       </Switch>
     </div>  
-  )
-}
+  );
+};
 
 export default (App);

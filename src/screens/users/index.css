@@ -1,26 +1,49 @@
 .users_container {
-    text-align: center;
-    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../assets/background_image.jpg");
 }
 
 .users_count {
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 20px;
     font-weight: bold;
     text-decoration: black 2px underline;
+    margin-left: 50px;
 }
 
 .user_container {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-   font-size: 16px;
-   padding: 10px;
-   font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    min-width: 200px;
+    border: 2px solid black;
+    font-size: 18px;
+    padding: 15px 15px;
+    font-weight: bold;
+    border-radius: 10px;
 }
 
 .user_div {
     padding: 5px;
+}
+
+.user_button {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+
+.save {
+    margin-right: 20px;
+}
+
+.changes_user_container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
 }
